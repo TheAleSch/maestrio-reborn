@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Brand */
+  --color-brand: #00ff73;
+  --color-brand-dim: #84ffa7;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Foreground */
+  --color-fg-secondary: #9a9793;
+  --color-fg-muted: #6b6b6b;
+  --color-over-primary: #18181b;
+  --color-fg1: #f3f4f6;
+  --color-slate-400: #94a3b8;
+
+  /* Backgrounds */
+  --color-level1: #030303;
+  --color-level1-hover: #010908;
+  --color-muted-bg: #111111;
+  --color-brand-10: rgba(0, 255, 115, 0.1);
+  --color-cyan-10: rgba(62, 255, 200, 0.1);
+  --color-sev-high-10: rgba(255, 122, 62, 0.1);
+  --color-neutral-10: rgba(255, 255, 255, 0.1);
+
+  /* Borders */
+  --color-brand-border-muted: rgba(77, 178, 122, 0.2);
+  --color-brand-border: rgba(0, 255, 115, 0.3);
+  --color-muted-border: rgba(255, 255, 255, 0.15);
+  --color-neutral-border: rgba(255, 255, 255, 0.3);
+  --color-orange-border: rgba(255, 122, 62, 0.3);
+  --color-cyan-border: rgba(62, 255, 200, 0.3);
+
+  /* Severity text */
+  --color-sev-high: #ff7a3e;
+  --color-sev-teal: #3effc8;
+
+  /* Fonts */
+  --font-space-grotesk: var(--font-space-grotesk), sans-serif;
+  --font-dm-mono: var(--font-dm-mono), monospace;
+  --font-dm-sans: var(--font-dm-sans), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-space-mono: var(--font-space-mono), monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
 }
