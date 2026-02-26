@@ -63,7 +63,7 @@ export function Features() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="flex flex-col gap-2 p-4 w-full sm:w-[calc(50%-8px)] lg:w-[310px] min-h-[180px]"
+                className="flex flex-col gap-2 p-4 w-full sm:w-[calc(50%-8px)] lg:w-[310px] min-h-[180px] rounded-lg border border-transparent transition-all duration-200 hover:bg-level1-hover hover:border-brand-border-muted"
               >
                 <div className="flex items-center justify-center w-10 h-10 bg-[#868686] rounded-lg text-white shrink-0">
                   {feature.icon}

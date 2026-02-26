@@ -7,6 +7,8 @@ export function Hero() {
       style={{
         backgroundImage:
           "linear-gradient(237.047deg, rgb(7,10,0) 5.69%, rgb(0,10,5) 16.85%, rgb(0,8,3) 31.13%, rgb(0,3,5) 50.33%, rgb(0,3,5) 50.34%, rgb(2,13,7) 65.96%, rgb(0,7,6) 78.01%, rgb(9,11,5) 84.70%, rgb(2,5,3) 97.65%)",
+        backgroundSize: "300% 300%",
+        animation: "hero-gradient 12s ease infinite",
       }}
     >
       <div className="max-w-[1440px] mx-auto flex flex-col gap-8">

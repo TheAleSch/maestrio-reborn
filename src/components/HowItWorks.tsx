@@ -6,7 +6,6 @@ interface Step {
   icon: ReactNode;
   title: string;
   description: string;
-  highlight?: boolean;
   roundedLeft?: boolean;
   roundedRight?: boolean;
 }
@@ -18,7 +17,6 @@ const steps: Step[] = [
     title: "Get feedback",
     description:
       "Drop one script tag into your product. Any user — support, beta, power user — can submit feedback without leaving your app.",
-    highlight: true,
     roundedLeft: true,
   },
   {
@@ -68,10 +66,8 @@ export function HowItWorks() {
             <div
               key={step.number}
               className={[
-                "flex flex-col gap-4 p-4 justify-center min-h-[270px]",
-                step.highlight
-                  ? "bg-level1-hover border border-brand-border"
-                  : "bg-level1 border border-brand-border-muted",
+                "flex flex-col gap-4 p-4 justify-center min-h-[270px] transition-all duration-200",
+                "bg-level1 border border-brand-border-muted hover:bg-level1-hover hover:border-brand-border",
                 step.roundedLeft
                   ? "rounded-tl-lg rounded-bl-lg sm:rounded-bl-none sm:rounded-tr-none"
                   : "",

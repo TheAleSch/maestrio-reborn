@@ -66,7 +66,7 @@ export function Integrations() {
           {integrations.map((item, i) => (
             <div
               key={`${item.slug}-${i}`}
-              className="flex flex-col items-center gap-2 p-4 sm:p-6 bg-level1 border border-brand-border-muted"
+              className="flex flex-col items-center gap-2 p-4 sm:p-6 bg-level1 border border-brand-border-muted transition-all duration-200 hover:bg-level1-hover hover:border-brand-border"
             >
               <BrandLogo slug={item.slug} />
               <span className="font-space-grotesk font-normal text-[13px] text-fg-secondary text-center uppercase tracking-wide">

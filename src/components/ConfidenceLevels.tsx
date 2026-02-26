@@ -106,7 +106,7 @@ export function ConfidenceLevels() {
           {levels.map((level, i) => (
             <div
               key={i}
-              className={`flex flex-col gap-4 p-4 bg-level1 border border-brand-border-muted min-h-[194px] ${level.rounded}`}
+              className={`flex flex-col gap-4 p-4 bg-level1 border border-brand-border-muted min-h-[194px] transition-all duration-200 hover:bg-level1-hover hover:border-brand-border ${level.rounded}`}
             >
               <span className="font-dm-mono text-[12px] text-brand tracking-[1.613px] uppercase">
                 {level.number}
