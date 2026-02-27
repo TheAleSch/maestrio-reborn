@@ -8,7 +8,7 @@ function StatusTag({ live }: { live: boolean }) {
     <div className="inline-flex items-center gap-2 bg-brand-10 border border-brand-border px-2 py-1 rounded-[1px]">
       <div className="relative size-2 shrink-0">
         <div className="absolute inset-0 rounded-full bg-brand animate-ping opacity-60" />
-        <div className="relative size-2 rounded-full bg-brand" style={{ boxShadow: "0 0 6px 2px #00ff73" }} />
+        <div className="relative size-2 rounded-full bg-brand" style={{ boxShadow: "0 0 6px 2px rgba(0,255,115,0.1)" }} />
       </div>
       <span className="font-dm-mono text-[12px] text-brand tracking-[1.613px] capitalize">
         Live
