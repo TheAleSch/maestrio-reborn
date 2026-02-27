@@ -1,8 +1,19 @@
 "use client";
 
-import { NavArrowRight, ArrowRight } from "iconoir-react";
+import { NavArrowRight } from "iconoir-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-const navLinks = ["Features", "Docs", "Company", "Pricing"];
+const navLinks = [
+  { label: "Features", href: "#features", comingSoon: false },
+  { label: "Docs", href: "#", comingSoon: true },
+  { label: "Company", href: "#", comingSoon: true },
+  { label: "Pricing", href: "#", comingSoon: true },
+];
 
 export function Navbar() {
   return (
@@ -14,31 +25,45 @@ export function Navbar() {
         </span>
 
         {/* Nav links */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <button
-              key={link}
-              className="flex items-center gap-0.5 px-2 py-1 rounded-3xl font-inter font-medium text-[13px] text-slate-400 hover:text-white transition-colors"
-            >
-              {link}
-              <NavArrowRight
-                width={10}
-                height={10}
-                className="rotate-90 opacity-70"
-              />
-            </button>
-          ))}
-        </nav>
+        <TooltipProvider>
+          <nav className="hidden md:flex items-center gap-1">
+            {navLinks.map(({ label, href, comingSoon }) => {
+              const linkEl = (
+                <a
+                  key={label}
+                  href={href}
+                  onClick={comingSoon ? (e) => e.preventDefault() : undefined}
+                  className="flex items-center gap-0.5 px-2 py-1 rounded-3xl font-inter font-medium text-[13px] text-slate-400 hover:text-white transition-colors"
+                >
+                  {label}
+                  <NavArrowRight
+                    width={10}
+                    height={10}
+                    className="rotate-90 opacity-70"
+                  />
+                </a>
+              );
+
+              if (!comingSoon) return linkEl;
+
+              return (
+                <Tooltip key={label}>
+                  <TooltipTrigger asChild>{linkEl}</TooltipTrigger>
+                  <TooltipContent>Coming soon</TooltipContent>
+                </Tooltip>
+              );
+            })}
+          </nav>
+        </TooltipProvider>
 
         {/* Action buttons */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block font-inter font-medium text-[14px] text-fg1 px-4 py-2 h-10 rounded-md hover:text-white transition-colors">
-            Sign in
-          </button>
-          <button className="flex items-center gap-2 font-inter font-medium text-[14px] text-over-primary bg-[#d1d5db] px-4 py-2 h-10 rounded-md hover:bg-white transition-colors">
-            Start free
-            <ArrowRight width={16} height={16} strokeWidth={2} />
-          </button>
+          <a
+            href="#signup"
+            className="flex items-center gap-2 font-inter font-medium text-[14px] text-over-primary bg-[#d1d5db] px-4 py-2 h-10 rounded-md hover:bg-white transition-colors"
+          >
+            Get early access
+          </a>
         </div>
       </div>
     </header>

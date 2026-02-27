@@ -42,7 +42,7 @@ const features: { icon: ReactNode; title: string; description: string }[] = [
 
 export function Features() {
   return (
-    <section className="py-16 px-6 sm:px-12 flex justify-center">
+    <section id="features" className="py-16 px-6 sm:px-12 flex justify-center">
       <div className="w-full max-w-[1120px] flex flex-col gap-12 p-4 sm:p-8">
         {/* Header */}
         <div className="flex flex-col gap-4">
