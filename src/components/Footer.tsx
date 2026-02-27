@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="backdrop-blur-[10px] bg-black/20 border-t border-muted-border px-6 sm:px-12 lg:px-32 py-10">
@@ -14,13 +16,19 @@ export function Footer() {
 
         {/* Right: links */}
         <div className="flex items-center gap-1">
-          <button className="px-2 py-1 font-dm-mono text-[13px] text-fg-muted hover:text-white transition-colors">
+          <Link
+            href="/privacy"
+            className="px-2 py-1 font-dm-mono text-[13px] text-fg-muted hover:text-white transition-colors"
+          >
             Privacy
-          </button>
+          </Link>
           <span className="font-dm-mono text-[12.5px] text-fg-muted">·</span>
-          <button className="px-2 py-1 font-dm-mono text-[13px] text-fg-muted hover:text-white transition-colors">
+          <Link
+            href="/terms"
+            className="px-2 py-1 font-dm-mono text-[13px] text-fg-muted hover:text-white transition-colors"
+          >
             Terms
-          </button>
+          </Link>
         </div>
       </div>
     </footer>
