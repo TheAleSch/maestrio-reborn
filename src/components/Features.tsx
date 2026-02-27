@@ -24,7 +24,7 @@ const features: { icon: ReactNode; title: string; description: string }[] = [
     icon: <Key width={24} height={24} strokeWidth={1.5} />,
     title: "Bring Your Own Keys or Use Ours",
     description:
-      "AI token costs flow directly to Anthropic or OpenAI — or through us, no markup cost.",
+      "AI token costs flow directly to Anthropic or OpenAI — or through us, at no markup.",
   },
   {
     icon: <Bell width={24} height={24} strokeWidth={1.5} />,

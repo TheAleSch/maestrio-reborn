@@ -19,7 +19,7 @@ const tagConfig: Record<
     dot: "bg-sev-teal",
   },
   human: {
-    label: "human-review",
+    label: "Human Review",
     bg: "bg-sev-high-10",
     border: "border-orange-border",
     text: "text-sev-high",
@@ -59,7 +59,7 @@ const levels = [
     rounded: "rounded-tl-lg",
   },
   {
-    number: "04",
+    number: "02",
     tag: "approve" as TagType,
     title: "MEDIUM confidence · 40–69%",
     description:
@@ -67,7 +67,7 @@ const levels = [
     rounded: "rounded-tr-lg",
   },
   {
-    number: "01",
+    number: "03",
     tag: "human" as TagType,
     title: "LOW confidence · <40%",
     description:

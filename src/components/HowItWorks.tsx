@@ -29,7 +29,7 @@ const steps: Step[] = [
   {
     number: "03",
     icon: <GitFork width={24} height={24} strokeWidth={1.5} />,
-    title: "Maestrio open a PR",
+    title: "Maestrio Opens a PR",
     description:
       "Connected to GitHub, the agentic AI creates a branch, writes the fix, runs tests, and opens a pull request — all autonomously.",
   },

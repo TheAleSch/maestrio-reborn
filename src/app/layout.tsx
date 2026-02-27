@@ -39,9 +39,24 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maestrio — Bug reported. Already fixed.",
+  metadataBase: new URL("https://maestrio.ai"),
+  title: "Maestrio — Agentic AI That Fixes Bugs Automatically",
   description:
-    "Embed a feedback widget. Watch your agentic AI triage, branch, code, and merge — without a single human in the loop for high-confidence fixes.",
+    "Maestrio embeds a lightweight feedback widget in your SaaS product. Our agentic AI triages reports, opens a PR, runs tests, and merges — in under 15 minutes. Zero dev effort for high-confidence fixes.",
+  openGraph: {
+    title: "Maestrio — Agentic AI That Fixes Bugs Automatically",
+    description:
+      "Embed a feedback widget. Our agentic AI triages, branches, codes, and merges — in under 15 minutes. Zero dev effort for high-confidence fixes.",
+    type: "website",
+    url: "https://maestrio.ai",
+    siteName: "Maestrio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maestrio — Agentic AI That Fixes Bugs Automatically",
+    description:
+      "Embed a feedback widget. Our agentic AI triages, branches, codes, and merges — in under 15 minutes.",
+  },
 };
 
 export default function RootLayout({

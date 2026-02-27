@@ -56,7 +56,7 @@ const integrations: Integration[] = [
   { kind: "brand", slug: "openai", display: "OpenAI", live: true },
   { kind: "brand", slug: "slack", display: "Slack", live: false },
   { kind: "icon", Icon: NetworkRight, display: "Webhooks", live: false },
-  { kind: "icon", Icon: Globe, display: "Rest API", live: true },
+  { kind: "icon", Icon: Globe, display: "REST API", live: true },
   { kind: "icon", Icon: ServerConnection, display: "MCP Server", live: false },
   { kind: "icon", Icon: Plus, display: "More coming...", live: false },
 ];
