@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Mono, DM_Sans, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
+import FaviconAnimator from "@/components/FaviconAnimator";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${dmMono.variable} ${dmSans.variable} ${inter.variable} ${spaceMono.variable} antialiased bg-black text-white`}
       >
+        <FaviconAnimator />
         {children}
       </body>
     </html>
