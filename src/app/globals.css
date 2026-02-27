@@ -46,8 +46,20 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes logo-glow {
+  0%, 100% { filter: drop-shadow(0 0 3px color-mix(in srgb, var(--fg-brand) 25%, transparent)); }
+  50%       { filter: drop-shadow(0 0 12px color-mix(in srgb, var(--fg-brand) 60%, transparent)); }
+}
+
+@keyframes logo-sweep {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(100%)  skewX(-15deg); }
+}
+
 @theme inline {
   --animate-hero-gradient: hero-gradient 12s ease infinite;
+  --animate-logo-glow: logo-glow 5s ease-in-out infinite;
+  --animate-logo-sweep: logo-sweep 5s ease-in-out infinite;
   /* Foreground → text-* */
   --color-brand: var(--fg-brand);
   --color-brand-dim: var(--fg-brand-dim);
@@ -89,12 +101,21 @@ body {
   color: #fff;
 }
 
+/* Elements with a solid background need position: relative so they
+   paint in DOM order at the same stacking level as the z-index:0 grain,
+   which means they come after body::before and naturally cover it. */
+.bg-level1,
+.bg-level1-hover,
+.bg-muted-bg {
+  position: relative;
+}
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 0;
   opacity: 0.12;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
   background-repeat: repeat;

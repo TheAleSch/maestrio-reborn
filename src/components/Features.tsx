@@ -56,16 +56,16 @@ export function Features() {
 
         {/* Cards */}
         <div
-          className="bg-level1 border border-brand-border-muted rounded-md p-4 sm:p-6"
+          className="bg-level1 border border-brand-border-muted rounded-[6px] p-4 overflow-clip"
           style={{ boxShadow: "6px 4px 50px -25px rgba(110,240,221,0.1)" }}
         >
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="flex flex-col gap-2 p-4 w-full sm:w-[calc(50%-8px)] lg:w-[310px] min-h-[180px] rounded-lg border border-transparent transition-all duration-200 hover:bg-level1-hover hover:border-brand-border-muted"
+                className="flex flex-col gap-2 p-4 min-h-[180px] items-start rounded-lg border border-transparent transition-all duration-200 hover:bg-level1-hover hover:border-brand-border-muted"
               >
-                <div className="flex items-center justify-center w-10 h-10 bg-[#868686] rounded-lg text-white shrink-0">
+                <div className="flex items-center justify-center w-10 h-10 bg-[#111] rounded-[6px] text-white shrink-0">
                   {feature.icon}
                 </div>
                 <h3 className="font-space-grotesk font-bold text-[18px] text-white">
