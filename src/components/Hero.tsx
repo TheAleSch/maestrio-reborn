@@ -22,7 +22,7 @@ export function Hero() {
           User reported a{" "}
           <span className="text-brand-dim">bug</span>.
           <br />
-          It&apos;s already{" "}
+          It&apos;s{" "}
           <span className="text-brand">fixed.</span>
         </h1>
 

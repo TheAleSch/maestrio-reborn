@@ -50,12 +50,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://maestrio.ai",
     siteName: "Maestrio",
+    images: [
+      {
+        url: "/Opengraph.png",
+        width: 1200,
+        height: 630,
+        alt: "Maestrio — Agentic AI That Fixes Bugs Automatically",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Maestrio — Agentic AI That Fixes Bugs Automatically",
     description:
       "Embed a feedback widget. Our agentic AI triages, branches, codes, and merges — in under 15 minutes.",
+    images: ["/Opengraph.png"],
   },
 };
 

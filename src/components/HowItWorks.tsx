@@ -36,7 +36,7 @@ const steps: Step[] = [
   {
     number: "04",
     icon: <GitMerge width={24} height={24} strokeWidth={1.5} />,
-    title: "Approve or Merge",
+    title: "Approve and Merge",
     description:
       "High-confidence PRs auto-merge. Complex changes surface with full diff context, ready for your one-click approval from the Kanban board.",
     roundedRight: true,
@@ -69,7 +69,7 @@ export function HowItWorks() {
                 "flex flex-col gap-4 p-4 justify-center min-h-[270px] transition-all duration-200",
                 "bg-level1 border border-brand-border-muted hover:bg-level1-hover hover:border-brand-border",
                 step.roundedLeft
-                  ? "rounded-tl-lg rounded-bl-lg sm:rounded-bl-none sm:rounded-tr-none"
+                  ? "rounded-tl-lg rounded-bl-lg sm:rounded-bl-none sm:rounded-tr-none lg:rounded-bl-lg"
                   : "",
                 step.roundedRight
                   ? "rounded-br-lg rounded-tr-lg sm:rounded-tl-none"
