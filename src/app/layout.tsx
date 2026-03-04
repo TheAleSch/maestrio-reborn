@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Mono, DM_Sans, Inter, Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import FaviconAnimator from "@/components/FaviconAnimator";
 
@@ -78,6 +79,13 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${dmMono.variable} ${dmSans.variable} ${inter.variable} ${spaceMono.variable} antialiased bg-black text-white`}
       >
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-DCHWQB4K7L" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DCHWQB4K7L');
+        `}</Script>
         <FaviconAnimator />
         {children}
       </body>
