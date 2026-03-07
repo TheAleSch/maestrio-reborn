@@ -3,6 +3,7 @@ import { Space_Grotesk, DM_Mono, DM_Sans, Inter, Space_Mono } from "next/font/go
 import Script from "next/script";
 import "./globals.css";
 import FaviconAnimator from "@/components/FaviconAnimator";
+import PostHogProvider from "@/components/PostHogProvider";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -86,8 +87,10 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-DCHWQB4K7L');
         `}</Script>
-        <FaviconAnimator />
-        {children}
+        <PostHogProvider>
+          <FaviconAnimator />
+          {children}
+        </PostHogProvider>
       </body>
     </html>
   );
